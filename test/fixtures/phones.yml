@@ -1,0 +1,35 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  price: 9.99
+  type_id: 1
+  os_id: 1
+  model_id: 1
+  color_id: 1
+  garant: false
+  on_sale: false
+  4g: false
+  3g: false
+  wi-fi: false
+  battery_charge: 1
+  memory: 1
+  ram: 1
+  screen_resolution: 1
+  mobile_producer_id: 1
+
+two:
+  price: 9.99
+  type_id: 1
+  os_id: 1
+  model_id: 1
+  color_id: 1
+  garant: false
+  on_sale: false
+  4g: false
+  3g: false
+  wi-fi: false
+  battery_charge: 1
+  memory: 1
+  ram: 1
+  screen_resolution: 1
+  mobile_producer_id: 1
