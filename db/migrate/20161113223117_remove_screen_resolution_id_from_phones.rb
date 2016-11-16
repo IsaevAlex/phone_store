@@ -1,0 +1,5 @@
+class RemoveScreenResolutionIdFromPhones < ActiveRecord::Migration[5.0]
+  def change
+  	 remove_column :phones, :screen_resolution
+  end
+end

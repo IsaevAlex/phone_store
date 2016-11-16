@@ -1,0 +1,43 @@
+<div class="panel indent">
+        <div class="row">
+            <div class="col-md-6">
+                 <h4><strong><%= link_to phone.mobile_model.name , phone %></strong></h4>
+            </div>  
+        </div>
+        
+        <div class="row">
+            <div class="col-md-3">
+                <a href="#" class="thumbnail">
+                    <img src="http://placehold.it/260x180" alt="">
+                </a>
+            </div>      
+            <div class="col-md-7">
+                <p>
+                    <%= phone.mobile_type.name %> <%= phone.mobile_system.name %>
+                </p>
+                <p>Разрешение: <%= phone.screen.name %></p>
+                <p>Память: <%= phone.memory %> ГБ</p>
+                <p><% phone.colors_phone.each do |color| %>
+                        <%= color.name %>
+                <% end %></p>
+                
+                
+                    
+                
+                <div class="row">
+                <div class="col-md-7">
+                    <p></p>
+                    <p>
+                         <i class="fa fa-comment fa-1x"></i> Отзывы | 34  
+                    </p>
+                </div>
+            </div>
+            </div>
+            <div class="col-md-2">
+                <h3><%= phone.price %> <i class="fa fa-rub fa-1x"></i></h3>
+                <%= link_to "Подробнее", phone , class:"btn btn-primary" %> 
+            </div>
+            
+
+        </div>  
+    </div>

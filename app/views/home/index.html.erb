@@ -1,0 +1,65 @@
+<div class="col-md-9">
+	<div class="row">
+		<%= form_tag root_path, method: 'get', class: 'search-form' do %>
+          <div class="input-group col-md-12">
+                <%= text_field_tag :search, params[:search], class:"form-control" %>
+                <span class="input-group-btn">
+                    <button class="btn btn-primary" type="button">
+                          <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                </span>
+            </div>
+       <% end %><br><br>
+     </div>
+	<div class="row">
+	    <div class="scope panel indent">
+			 <%= link_to "По дате добавления", recent_phones_path %>	| 
+			 <%= link_to "По цене", price_ascending_phones_path %>		
+		</div> <br>
+	</div>
+	<%= render @phones %>
+	<div class="indent">
+		<%= will_paginate @phones, renderer: BootstrapPagination::Rails %>	
+	</div>
+	
+</div>
+<div class="col-md-3">
+	<div class="panel">
+		<fieldset>
+			<legend>Цена, руб</legend>
+				<p><%= text_field_tag('filter[category][]',) %> <%= text_field_tag('filter[category][]',) %></p>
+		</fieldset><br>
+	</div>
+	<div class="panel">
+		<fieldset>
+			<legend>Производители</legend>
+				<% MobileProducer.all.each do |producer| %>
+					<p> <%= check_box_tag('filter[category][]', ) %> <%= producer.name %> </p> 
+				<% end %>
+		</fieldset><br>
+	</div>
+	<div class="panel">
+		<fieldset>
+			<legend>Тип</legend>
+				<% MobileType.all.each do |type| %>
+					<p> <%= check_box_tag('filter[category][]', ) %> <%= type.name %> </p> 
+				<% end %>
+		</fieldset>
+	</div>
+
+	<div class="panel">
+		<fieldset>
+			<legend>Cистема</legend>
+				<% MobileSystem.all.each do |system| %>
+					<p> <%= check_box_tag('filter[category][]', ) %> <%= system.name %> </p> 
+				<% end %>
+		</fieldset>
+	</div>
+		
+		
+	
+</div>
+
+	
+		
+	
