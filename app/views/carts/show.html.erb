@@ -1,0 +1,19 @@
+<% if notice %>
+<p id="notice"><%= notice %></p>
+<% end %>
+<div class="row">
+	<div class="col-md-offset-1 col-md-5">
+		<h1>Ваша корзина</h1>
+		<% @cart.line_items.each do |item| %>
+        <li><%= item.quantity %> &times;<%= item.phone.mobile_model.name %> <strong><%= item.total_price %></strong></li>
+    <% end %>
+    <h3>Общая цена <%= @cart.total_price %></h3>
+    <%= button_to 'Удалить корзину', @cart, method: :delete,    data: { confirm: 'Are you sure?' }, class:"btn  btn-danger" %>
+	</div>
+
+</div>
+<ul>
+    
+    
+
+</ul>

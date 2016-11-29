@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  mobile_system_id: 1
+  mobile_producer_id: 1
+  mobile_type_id: 1
+  screen_id: 1
+  min_price: 9.99
+  max_price: 9.99
+  min_ram: 9.99
+  max_ram: 9.99
+  min_memory: 9.99
+  max_memory: 9.99
+  min_battery_charge: 9.99
+  max_battery_charge: 9.99
+
+two:
+  mobile_system_id: 1
+  mobile_producer_id: 1
+  mobile_type_id: 1
+  screen_id: 1
+  min_price: 9.99
+  max_price: 9.99
+  min_ram: 9.99
+  max_ram: 9.99
+  min_memory: 9.99
+  max_memory: 9.99
+  min_battery_charge: 9.99
+  max_battery_charge: 9.99

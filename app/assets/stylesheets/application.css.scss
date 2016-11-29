@@ -19,8 +19,10 @@
  @import "bootstrap";
  @import "font-awesome";
 
+$primary_color: #F5F8FA;
+
 body{
-	background-color: #F5F8FA; 
+	background-color: $primary_color; 
 }
 
 .navbar{
@@ -29,7 +31,7 @@ body{
 
 .panel{
 	background-color: #fff;
-	padding-left: 2%;
+	padding: 2%;
 }
 
 .indent{
@@ -39,6 +41,11 @@ body{
 
 .scope{
 	margin-left: 6%;
+	margin-right: 6%;
+}
+
+.advanced{
+	padding: 5%;
 }
 
 .search-form{

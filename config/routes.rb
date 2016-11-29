@@ -1,12 +1,15 @@
 Rails.application.routes.draw do
+  resources :line_items, except: [:index]
+  resources :carts
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-  root :to => 'home#index'
+  root :to => 'phones#index'
   resources :phones do
   	 collection do
   	 	get :recent
   	 	get :price_ascending
   	 end	
   end
+  resources :searches
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

@@ -11,31 +11,30 @@
                     <img src="http://placehold.it/260x180" alt="">
                 </a>
             </div>      
-            <div class="col-md-7">
+            <div class="col-md-6">
                 <p>
                     <%= phone.mobile_type.name %> <%= phone.mobile_system.name %>
                 </p>
                 <p>Разрешение: <%= phone.screen.name %></p>
                 <p>Память: <%= phone.memory %> ГБ</p>
+                <p>Батарея: <%= phone.battery_charge %> МА/ч</p>
                 <p><% phone.colors_phone.each do |color| %>
                         <%= color.name %>
                 <% end %></p>
                 
-                
-                    
-                
                 <div class="row">
-                <div class="col-md-7">
-                    <p></p>
-                    <p>
-                         <i class="fa fa-comment fa-1x"></i> Отзывы | 34  
-                    </p>
+                    <div class="col-md-7">
+                        <p></p>
+                        <p>
+                             <i class="fa fa-comment fa-1x"></i> Отзывы | 34  
+                        </p>
+                    </div>
                 </div>
             </div>
-            </div>
-            <div class="col-md-2">
-                <h3><%= phone.price %> <i class="fa fa-rub fa-1x"></i></h3>
-                <%= link_to "Подробнее", phone , class:"btn btn-primary" %> 
+            <div class="col-md-3">
+                <h4><%= phone.price %> <i class="fa fa-rub fa-1x"></i></h4>
+                <p><%= link_to "Подробнее", phone , class:"btn btn-primary" %><br></p> 
+                <p><%= button_to 'Добавить в корзину', line_items_path(phone_id: phone),class:"btn btn-success" %></p> 
             </div>
             
 

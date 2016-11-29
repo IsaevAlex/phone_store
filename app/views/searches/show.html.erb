@@ -1,0 +1,33 @@
+<div class="col-md-8">
+	<div class="row">
+		<%= form_tag root_path, method: 'get', class: 'search-form' do %>
+          <div class="input-group col-md-12">
+                <%= text_field_tag :search, params[:search], class:"form-control" %>
+                <span class="input-group-btn">
+                    <button class="btn btn-primary" type="button">
+                          <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                </span>
+            </div>
+       <% end %><br><br>
+     </div>
+    <div class="row">
+    	<div class="scope">
+    		<h3>Результат поиска:</h3><br>	
+    	</div>
+    	
+    </div>
+	
+	<%= render @search.phones %>
+	
+	
+</div>
+<div class="col-md-3">
+	<div class="panel">
+		<%= render 'searches/new' %>
+	</div>
+	
+		
+		
+	
+</div>
