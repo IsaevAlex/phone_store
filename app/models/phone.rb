@@ -1,4 +1,6 @@
 class Phone < ApplicationRecord
+	acts_as_votable
+	
 	has_many :colors_phone,  through: :phone_colors, source: :color
     has_many :phone_colors, :dependent => :destroy
     has_many :line_items

@@ -13,6 +13,8 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
+gem 'acts_as_votable'
+gem 'devise'
 
 gem "font-awesome-rails"
 gem 'bootstrap-sass'
@@ -44,7 +46,7 @@ group :development, :test do
 end
 
 group :production do
-	gem 'pg'
+	  gem 'pg'
     gem 'rails_12factor'	
 end
 

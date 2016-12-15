@@ -5,7 +5,7 @@ class Search < ApplicationRecord
 
 	private
 		def find_phones
-			phones = Phone.order(:created_at => :desc)
+			phones = Phone.order(:cached_votes_up => :desc)
 			phones = phones.where(mobile_producer_id: mobile_producer_id) if mobile_producer_id.present?
 			phones = phones.where(mobile_type_id: mobile_type_id) if mobile_type_id.present?
 			phones = phones.where(mobile_system_id: mobile_system_id) if mobile_system_id.present?

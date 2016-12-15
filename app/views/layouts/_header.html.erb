@@ -16,8 +16,14 @@
                 <div class="navbar-header">
                      <h3><%= link_to "Интернет магазин", root_path %></h3>
                 </div>
-                <ul class="nav navbar-nav" >
-                 </ul>
+                <ul class="nav navbar-nav navbar-right" >
+                    <% if user_signed_in? %>
+                        <li><%= current_user.name %></li> 
+                    <% else %>
+                        <li><%= link_to 'Войти', new_user_session_path %></li>
+                        <li><%= link_to 'Зарегистрироваться', new_user_registration_path %></li>    
+                    <% end %>
+                </ul>
             </div>
        
         </div>
